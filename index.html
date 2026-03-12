@@ -444,7 +444,7 @@
         <div class="field-group">
           <label class="field-label" for="division">Division <span class="req">*</span></label>
           <select id="division" required disabled>
-            <option value="">Select sport first…</option>
+            <option value="">Select sport first...</option>
           </select>
         </div>
       </div>
@@ -599,15 +599,15 @@
   // Field definitions
   // availability: null = all days, array = specific days only
   const allFields = [
-    { name: "River's Edge 1",   paths: [60],    tags: ['lights'],              availability: null,                        note: 'Has lights — 7:30 PM available' },
+    { name: "River's Edge 1",   paths: [60],    tags: ['lights'],              availability: null,                        note: 'Has lights - 7:30 PM available' },
     { name: "Maher",            paths: [90],    tags: [],                      availability: null,                        note: '90\' base paths' },
     { name: "Woodrow Softball", paths: [60],    tags: ['school'],              availability: null,                        note: 'Middle school field' },
-    { name: "Woodrow Baseball", paths: [90],    tags: ['school'],              availability: null,                        note: '90\' base paths · Middle school field' },
+    { name: "Woodrow Baseball", paths: [90],    tags: ['school'],              availability: null,                        note: '90\' base paths - Middle school field' },
     { name: "Madison Softball", paths: [60],    tags: ['school'],              availability: null,                        note: 'Middle school field' },
-    { name: "Madison Baseball", paths: [90],    tags: ['school'],              availability: null,                        note: '90\' base paths · Middle school field' },
+    { name: "Madison Baseball", paths: [90],    tags: ['school'],              availability: null,                        note: '90\' base paths - Middle school field' },
     { name: "Highland 1",       paths: [60],    tags: ['preferred'],           availability: null,                        note: 'Preferred for younger divisions' },
     { name: "Highland 2",       paths: [60],    tags: ['preferred'],           availability: null,                        note: 'Preferred for younger divisions' },
-    { name: "Norwich",          paths: [60],    tags: ['lights'],              availability: null,                        note: 'Has lights — 7:30 PM available' },
+    { name: "Norwich",          paths: [60],    tags: ['lights'],              availability: null,                        note: 'Has lights - 7:30 PM available' },
     { name: "Wasena",           paths: [60],    tags: ['limited'],             availability: ['Friday','Saturday'],       note: 'Available Fridays & Saturdays only' },
   ];
 
@@ -673,7 +673,7 @@
   function updateDivisions() {
     const sport = document.getElementById('sport').value;
     const divSel = document.getElementById('division');
-    divSel.innerHTML = '<option value="">Select division…</option>';
+    divSel.innerHTML = '<option value="">Select division...</option>';
     if (sport && divisions[sport]) {
       divisions[sport].forEach(d => {
         const opt = document.createElement('option');
@@ -683,7 +683,7 @@
       divSel.disabled = false;
     } else {
       divSel.disabled = true;
-      divSel.innerHTML = '<option value="">Select sport first…</option>';
+      divSel.innerHTML = '<option value="">Select sport first...</option>';
     }
     updateFields();
   }
@@ -866,7 +866,7 @@
 
     // Submit to Formspree
     const btn = document.querySelector('.btn-submit');
-    btn.textContent = 'Submitting…';
+    btn.textContent = 'Submitting...';
     btn.disabled = true;
 
     try {
